@@ -186,12 +186,12 @@ int main()
 		glUseProgram(shaderProgram);
 		
 
-		// Using uniform to change the color of the rectangle
+		// Using uniform to change the color of the triangle
 		float timeValue = glfwGetTime();
 		float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
 		int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
 		
-		glUniform4f(vertexColorLocation, 0.5f, greenValue, 0.0f, 1.0f);  // Set the color of the rectangle to a changing green value
+		glUniform4f(vertexColorLocation, 0.5f, greenValue, 0.0f, 1.0f);  // Set the color of the triangle to a changing green value
 
 		// Draw the rectangle
 		glBindVertexArray(VAO);
@@ -280,4 +280,5 @@ void APIENTRY glDebugOutput(GLenum source,
 	} std::cout << std::endl;
 	std::cout << std::endl;
 }
+
 
